@@ -1,0 +1,31 @@
+Question 1
+create or replace function PreReqsFor(int, courseNum) returns courseNum as $$
+declare 
+	courseNum int :=1;
+begin
+		select  preReqNum
+        from prerequesities;
+        where preRegNum is not NULL;
+   go;
+end;
+$$
+language plpgsql;
+
+select PreReqsFor (220, 'results');
+fetch all from results;
+
+Question 2
+create or replace function IsPreReqsFor(int, courseNum) returns courseNum as $$
+declare 
+	courseNum int :=1;
+begin
+		select  CourseNum
+        from prerequesities;
+        where preRegNum = courseNum;
+   go;
+end;
+$$
+language plpgsql;
+
+select PreReqsFor (220, 'results');
+fetch all from results;
