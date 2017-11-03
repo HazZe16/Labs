@@ -1,0 +1,48 @@
+--MUST CONVERT TO MYSQL QUERY'
+
+
+
+Alfred human being in a mob
+
+-- Name search--
+SELECT e.name, e.department, r.role
+FROM e employees inner join r roles in e.eid=r.eid
+WHERE e.firstname == 'Session";
+
+SELECT e.name, e.department, r.role
+FROM e employees inner join r roles in e.eid=r.eid
+WHERE e.lastname == 'Session";
+
+
+--Role Search--
+SELECT e.*
+
+-- Department search--
+SELECT Employee.FirstName, Employee.LastName, Employee.Phone, Employee.Email
+FROM Employee, Branch
+WHERE Employee.Branch = Branch.LID
+AND Employee.Department = ‘Technology’
+AND Branch.Location = ‘New York’;
+
+
+
+
+BK king
+
+
+
+
+
+
+
+
+Cristian god
+
+
+
+
+
+
+
+
+Celestin non believer
