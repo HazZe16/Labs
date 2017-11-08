@@ -1,8 +1,8 @@
 <?php
 
-    $servername = "localhost";
-    $username = "biruk116"; //root
-    $password = ""; //p@sswerd
+    $servername = "127.0.0.1";
+    $username = "root"; //root
+    $password = "p@sswerd"; //p@sswerd
     $dbname = "ACME";
     $employee = "Employee";
     
