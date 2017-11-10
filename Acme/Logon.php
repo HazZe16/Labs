@@ -32,26 +32,26 @@ if (isset($_POST['submit']))
       $_SESSION['user_branch'] = $aUser['Branch'];
       $_SESSION['user_DoB'] = $aUser['DateofBirth'];
       $_SESSION['user_department'] = $aUser['Department'];
-      $_SESSION['user_emal'] = $aUser['Email'];
+      $_SESSION['user_email'] = $aUser['Email'];
       $_SESSION['user_picture'] = $aUser['Picture'];
       $_SESSION['user_position'] = $aUser['position'];
       
-      if ($aUser['position'] = '2') 
+      if ($aUser['position'] === '2') 
       {
         header("location: HRview.php"); // redirecting to admin landing page
       } 
-      elseif ($aUser['position'] = '1') 
+      elseif ($aUser['position'] === "1") 
       {
-        header("location: Managerview.php"); // redirecting to students landing page
+        header("location: Managerview.php"); // redirecting to manager landing page
       }
-      elseif ($aUser['position'] = '0') 
+      else 
       {
-        header("location: Employeeview.php");
+        header("location: Employeeview.php"); //redirect to employee page
       }
     } 
     else 
     {
-      echo "Username or Password is invalid.";
+      header("location: login.php?message=Username%20or%20Password%20is%20invalid.");
     }
     
     //mysqli_close($conn); // Closing Connection

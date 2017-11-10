@@ -2,8 +2,10 @@
 <?php
 session_start(); // Starting Session
 require 'sql_helper.php';
+if(!isset($_SESSION['login_user'])){
+        header("Location: index.php?message=You%20need%20to%20login%20first.");
+    }
 ?>
-
 
 <html>
 	<head>
@@ -17,7 +19,7 @@ require 'sql_helper.php';
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index -2.html">ACME</a></h1>
+					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
 							<li><a href="index.php">Directory</a></li>
@@ -33,7 +35,7 @@ require 'sql_helper.php';
 					<div class="content">
 						<header><h1>Search Directory</h1>
 						<?php echo $_GET[message];?>
-							<form action="catch.php" method="post">
+							<form action="searchresults.php" method="post">
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
 							<input id="lastname" type="text" name="lastname" Placeholder="Last Name">
 							<input name="submit" type='submit' value='SEARCH'>

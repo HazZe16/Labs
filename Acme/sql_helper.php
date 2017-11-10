@@ -1,10 +1,14 @@
 <?php
 
-    $servername = "127.0.0.1";
+    $servername = "localhost";
     $username = "root"; //root
     $password = "p@sswerd"; //p@sswerd
-    $dbname = "ACME";
+    $dbname = "Acme";
     $employee = "Employee";
+    $admin = "admin";
+    $dep = "Department";
+    $role = "Role";
+    $EmpR = "EmployeeRoles";
     
     $conn = mysqli_connect($servername, $username, $password);
     

@@ -5,11 +5,12 @@ require 'sql_helper.php';
 
 if (isset($_POST['submit']))
 {
-     
-  $firstname=$_POST['firstname'];
+     <?php echo 'ProfilePics/'.$row['Picture'].'.jpg'; ?>
+    // Define $username and $password
+    $firstname=$_POST['firstname'];
 
     // SQL query to fetch information of registered users and finds user match.
-    $sql = "SELECT $employee.Picture, $employee.firstname, $employee.lastname, $role.name
+    $sql = "SELECT $employee.firstname, $employee.lastname, $role.name 
     		FROM $EmpR INNER JOIN $employee ON $EmpR.Eid = $employee.Eid 
     				   INNER JOIN $role ON $EmpR.Rid = $role.Rid
     		WHERE $employee.firstname LIKE '%$firstname%'";
@@ -57,7 +58,7 @@ if (isset($_POST['submit']))
                                 while($row=mysqli_fetch_array($result)) 
                                 {
 						?>
-						<li><img src="<?php echo 'ProfilePics/'.$row['Picture'].'.jpg'; ?>" style="width:200px"><p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
+						<li><img src="img/avatar.png" alt="Avatar" style="width:200px"><p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
 						<?php
 								$i++;								
                                 }
