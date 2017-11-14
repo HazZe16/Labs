@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
+ if(isset($_SESSION['login_user'])){
+            header("Location: profile.php");
+            die;
+        }
 ?>
 <html >
 <head>
