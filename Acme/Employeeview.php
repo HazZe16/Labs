@@ -1,5 +1,11 @@
 <!DOCTYPE HTML>
-
+<?php
+session_start(); // Starting Session
+require 'sql_helper.php';
+if(!isset($_SESSION['login_user'])){
+        header("Location: index.php?message=You%20need%20to%20login%20first.");
+    }
+?>
 <html>
 	<head>
 		<title>ACME CORPORATE DIRECTORY</title>
@@ -17,8 +23,8 @@
 						<ul>
 							<li><a href="search.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
-							<li><a href="#four">Edit Profile</a></li>
-							<li><a href="login.php" class="button special">Sign Out</a></li>
+							<li><a href="profile.php">Profile</a></li>
+							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -27,9 +33,11 @@
 				<section id="banner">
 					<div class="content">
 						<header><h1>Search Directory</h1>
-							<form><input type="text" name="search" Placeholder="Search. ."></form>
-						<a href="#" class="button">Search</a>
-							
+							<?php echo $_GET[message];?>
+							<form action="searchresults.php" method="post">
+							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
+							<input name="submit" type='submit' value='SEARCH'>
+							</form>
 						>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>

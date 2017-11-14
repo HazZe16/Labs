@@ -24,10 +24,21 @@ WHERE Employee.Branch = Branch.LID
 AND Employee.Department = ‘Technology’
 AND Branch.Location = ‘New York’;
 
+	<?php
+                                $i=1;
+                                while($row=mysqli_fetch_array($result)) 
+                                {
+						?>
+						<li><img src="<?php echo 'ProfilePics/'.$row['Picture'].'.jpg'; ?>" style="width:200px"><p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
+						<?php
+								$i++;								
+                                }
+						?>
 
 
 
 BK king
+
 
 
 

@@ -27,20 +27,21 @@ if (isset($_POST['submit']))
       $_SESSION['login_user']=$username;
       $aUser = mysqli_fetch_assoc($result);
       $_SESSION['user_ID'] = $aUser['EID'];
-      $_SESSION['user_firstname'] = $aUser['FirstName'];
-      $_SESSION['user_lastname'] = $aUser['LastName'];
+      $_SESSION['user_firstname'] = $aUser['firstname'];
+      $_SESSION['user_lastname'] = $aUser['lastname'];
       $_SESSION['user_branch'] = $aUser['Branch'];
       $_SESSION['user_DoB'] = $aUser['DateofBirth'];
       $_SESSION['user_department'] = $aUser['Department'];
       $_SESSION['user_email'] = $aUser['Email'];
+      $_SESSION['user_phone'] = $aUser['phone'];
       $_SESSION['user_picture'] = $aUser['Picture'];
       $_SESSION['user_position'] = $aUser['position'];
       
-      if ($aUser['position'] === '2') 
+      if ($aUser['position'] = '2') 
       {
         header("location: HRview.php"); // redirecting to admin landing page
       } 
-      elseif ($aUser['position'] === "1") 
+      elseif ($aUser['position'] = "1") 
       {
         header("location: Managerview.php"); // redirecting to manager landing page
       }

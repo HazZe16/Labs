@@ -24,7 +24,7 @@ if(!isset($_SESSION['login_user'])){
 						<ul>
 							<li><a href="index.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
-							<li><a href="#four">Tools</a></li>
+							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
@@ -37,7 +37,6 @@ if(!isset($_SESSION['login_user'])){
 						<?php echo $_GET[message];?>
 							<form action="searchresults.php" method="post">
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
-							<input id="lastname" type="text" name="lastname" Placeholder="Last Name">
 							<input name="submit" type='submit' value='SEARCH'>
 							</form>
 						<li><img src="img/avatar.png" alt="Avatar" style="width:200px"><p>Name, Department</p></li>

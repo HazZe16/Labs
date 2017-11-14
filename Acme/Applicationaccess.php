@@ -1,74 +1,62 @@
 <!DOCTYPE HTML>
-<?php
-session_start(); // Starting Session
-require 'sql_helper.php';
-if(!isset($_SESSION['login_user'])){
-        header("Location: index.php?message=You%20need%20to%20login%20first.");
-    }
-?>
+
 <html>
 	<head>
 		<title>ACME CORPORATE DIRECTORY</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index.php">ACME</a></h1>
+					<h1 id="logo"><a href="index -2.html">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="search.php">Directory</a></li>
+							<li><a href="index -2.html">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
-							<li><a href="#four">Edit Profile</a></li>
-							<li><a href="logout.php" class="button special">Sign Out</a></li>
+							<li><a href="#four">Tools</a></li>
+							<li><a href="login.html" class="button special">Sign Out</a></li>
 						</ul>
+						
+					
 					</nav>
 				</header>
 
 			<!-- Banner -->
 				<section id="banner">
 					<div class="content">
-						<header><h1>Search Directory</h1>
-						<?php echo $_GET[message];?>
-							<form action="detailedsearch.php" method="post">
-							<form><input type="text" name="Last name" Placeholder="Last Name"></form>
-							<form><input type="text" name="First name" Placeholder="First Name"></form>
-							<input name="submit" type='submit' value='SEARCH'>
-							</form>
+						<header>
+						<h3>APPLICATION ACCESS</h3>
+						
 							
-						>
+						</header>
+						<ul class="icons">
+						<li><a button type="button special" onclick="myFunction()" class="icon alt major fa-skype"><span class="label">Skype</span></a></li>
+						<li><a href="mFunction" class="icon alt major fa-envelope-o"><span class="label">Outlook</span></a></li>
+						<li><a href="mFunction" class="icon alt major fa-users"><span class="label">TeamCity</span></a></li>
+						<li><a href="mFunction" class="icon alt major fa-money"><span class="label">Sale Factory</span></a></li>
+						<li><a href="mFunction" class="icon alt major fa-cogs"><span class="label">Artifactory</span></a></li>
+						<li><a href="mFunction" class="icon alt major fa-list"><span class="label">Asset Management </span></a></li>
+					</ul>
+						<p id="myP"><form><input style="visibility:hidden" type="text" name="search" Placeholder="Enter E-mail"></form>
+						<div style="visibility:hidden" align="center"> <a href="" class="button">Request access </a> </p>
+					
+						
 					</div>
-					<a href="#one" class="goto-next scrolly">Next</a>
+					<script>
+					function mFunction(){
+					 document.getElementById("myP").style.visibility = "visble" ;
+					}
+					</script>
+				
+			
+					
 				</section>
 
-			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/main website.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="4u 12u$(medium)">
-									<header>
-										<h2>Departments</h2>
-										<ul><a href="#" class="button1">Finance</a></ul>
-										<ul><a href="#" class="button2">Human Resources</a></ul>
-										<ul><a href="#" class="button3">Marketing</a></ul>
-										<ul><a href="#" class="button4">Faculty</a></ul>
-									</header>
-								</div>
-								<div class="4u 12u$(medium)">
-									
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section
+			
 
 			
 

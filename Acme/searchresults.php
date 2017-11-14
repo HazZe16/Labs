@@ -9,7 +9,7 @@ if (isset($_POST['submit']))
   $firstname=$_POST['firstname'];
 
     // SQL query to fetch information of registered users and finds user match.
-    $sql = "SELECT $employee.Picture, $employee.firstname, $employee.lastname, $role.name
+    $sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname, $role.name
     		FROM $EmpR INNER JOIN $employee ON $EmpR.Eid = $employee.Eid 
     				   INNER JOIN $role ON $EmpR.Rid = $role.Rid
     		WHERE $employee.firstname LIKE '%$firstname%'";
@@ -57,8 +57,11 @@ if (isset($_POST['submit']))
                                 while($row=mysqli_fetch_array($result)) 
                                 {
 						?>
-						<li><img src="<?php echo 'ProfilePics/'.$row['Picture'].'.jpg'; ?>" style="width:200px"><p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
+						<li><img src="<?php echo 'ProfilePics/'.$row['Picture']; ?>" style="width:200px">
+						<p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
 						<?php
+						$id = $row['Eid'];
+                	    echo "<td><form action='results.php' method='post'><button type='submit' name='expandid' value='$id'>Expand</button></form>";
 								$i++;								
                                 }
 						?>
