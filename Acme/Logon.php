@@ -35,13 +35,15 @@ if (isset($_POST['submit']))
       $_SESSION['user_email'] = $aUser['Email'];
       $_SESSION['user_phone'] = $aUser['phone'];
       $_SESSION['user_picture'] = $aUser['Picture'];
-      $_SESSION['user_position'] = $aUser['position'];
+      $_SESSION['user_admin'] = $aUser['admin'];
+      $_SESSION['user_manager'] = $aUser['manager'];
+        
       
-      if ($aUser['position'] = '2') 
+      if ($aUser['admin'] = 1) 
       {
         header("location: HRview.php"); // redirecting to admin landing page
       } 
-      elseif ($aUser['position'] = "1") 
+      elseif ($aUser['manager'] = 1) 
       {
         header("location: Managerview.php"); // redirecting to manager landing page
       }
