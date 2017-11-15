@@ -39,11 +39,11 @@ if (isset($_POST['submit']))
       $_SESSION['user_manager'] = $aUser['manager'];
         
       
-      if ($aUser['admin'] = 1) 
+      if ($_SESSION['user_admin'] == 1) 
       {
         header("location: HRview.php"); // redirecting to admin landing page
       } 
-      elseif ($aUser['manager'] = 1) 
+      elseif ($_SESSION['user_manager'] == 1) 
       {
         header("location: Managerview.php"); // redirecting to manager landing page
       }
