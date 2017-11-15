@@ -60,7 +60,7 @@
         		?>
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$Suser['Picture'].'.jpg'; ?>" align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$Suser['Picture']; ?>" align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $Suser['firstname'].' '. $Suser['lastname'];?></h2>
 				</header>
