@@ -12,13 +12,13 @@
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index -2.html">ACME</a></h1>
+					<h1 id="logo"><a href="index -2.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index -2.html">Directory</a></li>
+							<li><a href="index -2.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
 							<li><a href="#four">Tools</a></li>
-							<li><a href="login.html" class="button special">Sign Out</a></li>
+							<li><a href="login.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
 				</header>

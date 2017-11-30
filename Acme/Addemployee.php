@@ -1,6 +1,13 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
+    if(!isset($_SESSION['login_user'])){
+        header("Location: index.php?message=You%20need%20to%20login%20first.");
+    }
+    else if(!isset($_SESSION['admin'])){
+        header("Location: profile.php");
+    }
+?>
 ?>
 <html>
 	<head>
@@ -14,12 +21,12 @@ session_start();
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index -2.html">ACME</a></h1>
+					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index -2.html">Directory</a></li>
-							<li><a href="#one">Departments</a></li>
-							<li><a href="#four">Edit Profile</a></li>
+							<li><a href="search.php">Directory</a></li>
+							<li><a href="Views.php">Options</a></li>
+							<li><a href="profile.php">Edit Profile</a></li>
 							<li><a href="login.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>

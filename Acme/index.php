@@ -15,7 +15,7 @@
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.php">Home</a></li>
+							<li><a href="Views.php">Home</a></li>
 							<li><a href="#two">Our Employess</a></li>
 							<li><a href="#">Contact</a></li>
 							<li><a href="#five">Request a Log In</a></li>

@@ -19,7 +19,7 @@ if (isset($_POST['submit']))
     
 } else {
  echo "invalid search result, please try again";
- header("location: search.php");
+ header("location: Views.php?message=Invalid%20search%20please%20give%20more%20details.");
 }
 ?>
 <html>
@@ -37,7 +37,7 @@ if (isset($_POST['submit']))
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="search.php">Directory</a></li>
+							<li><a href="Views.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
 							<li><a href="#four">Tools</a></li>
 							<li><a href="login.php" class="button special">Sign Out</a></li>
@@ -66,7 +66,7 @@ if (isset($_POST['submit']))
                                 }
 						?>
 																		
-					<a href="#one" class="goto-next scrolly">Next</a>
+					<a href="search.php">Search Again</a>
 				</section>
 
 			<!-- Scripts -->

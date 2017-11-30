@@ -22,7 +22,7 @@ if(!isset($_SESSION['login_user'])){
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.php">Directory</a></li>
+							<li><a href="Views.php">Home</a></li>
 							<li><a href="#one">Departments</a></li>
 							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
@@ -39,10 +39,6 @@ if(!isset($_SESSION['login_user'])){
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
 							<input name="submit" type='submit' value='SEARCH'>
 							</form>
-						<li><img src="img/avatar.png" alt="Avatar" style="width:200px"><p>Name, Department</p></li>
-						<li><img src="img/avatar2.png" alt="Avatar" style="width:200px"><p>Name, Department</p></li>
-						<li><img src="img/avatar3.png" alt="Avatar" style="width:200px"><p>Name, Department</p></li>
-						<li><img src="img/avatar.png" alt="Avatar" style="width:200px"><p>Name, Department</p></li>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>

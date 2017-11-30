@@ -34,13 +34,56 @@ if(!isset($_SESSION['login_user'])){
 					<div class="content">
 						<header><h1>Search Directory</h1>
 						<?php echo $_GET[message];?>
-							<form action="detailedsearch.php" method="post">
-							<form><input type="text" name="Last name" Placeholder="Last Name"></form>
-							<form><input type="text" name="First name" Placeholder="First Name"></form>
+							<form action="detailedsearchresults.php" method="post">
+							<input id="firstname" type="text" name="firstname" Placeholder="First Name"><br>
+							<input id="lastname" type="text" name="lastname" Placeholder="Last Name"><br>
+							
+							<?php echo "Department: <select name=department>";
+								    echo "<option name= None value=". NULL." >None</option>\n";
+								  $sqlD = "SELECT * FROM Department";
+    							  $resultD = mysqli_query($conn,$sqlD);
+								  $i=1;
+                                while($rowD=mysqli_fetch_array($resultD)) {
+                                	echo "<option value=". $rowD['Did'].">".$rowD['Name']."</option>\n";
+                                }
+                                echo "</select>\n<br>";
+                             ?>
+                             
+                             <?php echo "Location: <select name=location>";
+                            		echo "<option name= None value=". NULL." >None</option>\n";
+								  $sqlB = "SELECT * FROM Branch";
+    							  $resultB = mysqli_query($conn,$sqlB);
+								  $i=1;
+                                while($rowB=mysqli_fetch_array($resultB)) {
+                                	echo "<option value=". $rowB['Lid'].">".$rowB['Name']."</option>\n";
+                                }
+                                echo "</select>\n<br>";
+                             ?>
+                             
+                             <?php echo "Role: <select name=role>";
+                            		echo "<option name= None value=". NULL.">None</option>\n";
+								  $sqlR = "SELECT * FROM Role";
+    							  $resultR = mysqli_query($conn,$sqlR);
+								  $i=1;
+                                while($rowR=mysqli_fetch_array($resultR)) {
+                                	echo "<option value=". $rowR['Rid'].">".$rowR['Name']."</option>\n";
+                                }
+                                echo "</select>\n<br>";
+                             ?>
+                             
+                             <?php echo "Manager: <select name=manager>";
+                            		echo "<option name= None value=".NULL." >None</option>\n";
+								  $sqlM = "SELECT *
+								  FROM $manager inner join $employee on $employee.eid = $manager.eid";
+    							  $resultM = mysqli_query($conn,$sqlM);
+								  $i=1;
+                                while($rowM=mysqli_fetch_array($resultM)) {
+                                	echo "<option value=". $rowM['Mid'].">".$rowM['Mid']."</option>\n";
+                                }
+                                echo "</select>\n<br>";
+                             ?>
 							<input name="submit" type='submit' value='SEARCH'>
 							</form>
-							
-						>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>

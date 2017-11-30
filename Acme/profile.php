@@ -24,7 +24,7 @@ require "sql_helper.php";
 						<ul>
 							<li><a href="index.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
-							<li><a href="#four">Tools</a></li>
+							<li><a href="Views">Tools</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
@@ -35,7 +35,7 @@ require "sql_helper.php";
 				
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$_SESSION['user_picture']?> align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$_SESSION['Picture']?> align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'] ?></h2>
 				</header>

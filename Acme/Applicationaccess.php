@@ -5,20 +5,20 @@
 		<title>ACME CORPORATE DIRECTORY</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="main.css" />
 	</head>
 	<body class="landing">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="index -2.html">ACME</a></h1>
+					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index -2.html">Directory</a></li>
+							<li><a href="index.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
 							<li><a href="#four">Tools</a></li>
-							<li><a href="login.html" class="button special">Sign Out</a></li>
+							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 						
 					
@@ -34,7 +34,8 @@
 							
 						</header>
 						<ul class="icons">
-						<li><a button type="button special" onclick="myFunction()" class="icon alt major fa-skype"><span class="label">Skype</span></a></li>
+						<li><a button type="button special" onclick="myFunction()" 
+						<li><a href="mFunction" class="icon alt major fa-skype" value="Skype"><span class="label">Skype</span></a></li>
 						<li><a href="mFunction" class="icon alt major fa-envelope-o"><span class="label">Outlook</span></a></li>
 						<li><a href="mFunction" class="icon alt major fa-users"><span class="label">TeamCity</span></a></li>
 						<li><a href="mFunction" class="icon alt major fa-money"><span class="label">Sale Factory</span></a></li>

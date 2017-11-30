@@ -20,7 +20,7 @@
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="detailedsearch.php">Directory</a></li>
+							<li><a href="Views.php">Directory</a></li>
 							<li><a href="#one">Departments</a></li>
 							<li><a href="profile.php">Profile</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
@@ -60,7 +60,7 @@
         		?>
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$Suser['Picture']; ?>" align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$Suser['Picture'].'.jpg'; ?>" align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $Suser['firstname'].' '. $Suser['lastname'];?></h2>
 				</header>
@@ -76,7 +76,7 @@
 				
 				
 			
-				<div  align="center"> <a href="index.php" class="button">Go Home </a> <a href="search.php" class="button">New Search </a> </p>
+				<div  align="center"> <a href="Views.php" class="button">Go Home </a> <a href="search.php" class="button">New Search </a> </p>
 						
 						
 					</div>
