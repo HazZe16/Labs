@@ -6,6 +6,7 @@ if(!isset($_SESSION['login_user'])){
         header("Location: index.php?message=You%20need%20to%20login%20first.");
     }
 ?>
+
 <html>
 	<head>
 		<title>ACME CORPORATE DIRECTORY</title>
@@ -21,9 +22,9 @@ if(!isset($_SESSION['login_user'])){
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="search.php">Directory</a></li>
-							<li><a href="#one">Departments</a></li>
-							<li><a href="profile.php">Profile</a></li>
+							<li><a href="Views.php">Home</a></li>
+							<li><a href="search.php">Search</a></li>
+							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
@@ -33,46 +34,48 @@ if(!isset($_SESSION['login_user'])){
 				<section id="banner">
 					<div class="content">
 						<header><h1>Search Directory</h1>
-							<?php echo $_GET[message];?>
-							<form action="searchresults.php" method="post">
+						<?php echo $_GET[message];?>
+							<form action="detailedsearchresults.php" method="post" class="form-wrapper cf">
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
 							<input name="submit" type='submit' value='SEARCH'>
 							</form>
-						>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 
 			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/main website.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="4u 12u$(medium)">
-									<header>
-										<h2>Departments</h2>
-										<ul><a href="#" class="button1">Finance</a></ul>
-										<ul><a href="#" class="button2">Human Resources</a></ul>
-										<ul><a href="#" class="button3">Marketing</a></ul>
-										<ul><a href="#" class="button4">Faculty</a></ul>
-									</header>
-								</div>
-								<div class="4u 12u$(medium)">
-									
-								</div>
-								
+				<section id="one" class="wrapper style1 special fade-up">
+					<div class="container">
+						<header class="major">
+							<h2>Human Resources</h2>
+							<p>Options</p>
+						</header>
+						<div class="box alt">
+							<div class="row uniform">
+							<a href="ApplicationAccess.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-area-chart"></span>
+									<h3>Request Access</h3>
+									<p>**************************.</p>
+								</a></section>
+							<a href="search.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-comment"></span>
+									<h3>Search for Employee</h3>
+									<p>**************************.</p>
+								</a></section>
+							<a href="profile.php">	<section class="4u$ 6u(medium) 12u$(xsmall)">
+									<span class="icon alt major fa-flask"></span>
+									<h3>View Profile</h3>
+									<p>**************************.</p>
+								</a></section>
 							</div>
 						</div>
+						<footer class="major">
+							<ul class="actions">
+								<li><a href="#" class="button">Back to Top</a></li>
+							</ul>
+						</footer>
 					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
-
-			
-				
-			
-
-			<
 
 			
 

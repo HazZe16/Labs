@@ -16,7 +16,6 @@
         </title>
     </head>
     <body>
-        <h3>Your new user record has been created!</h3>
         <?php
         
         $target = 'ProfilePics/';
@@ -36,7 +35,7 @@
             $values = array("'".$_POST['firstname']."'", "'".$_POST['lastname']."'", "'".$_POST['DateofBirth']."'", "'".$_POST['phone']."'",
                         "'".$_POST['Email']."'", "'".$_POST['Username']."'", "PASSWORD('".$_POST['password']."')", "'".$_POST['admin']."'", "'".$_POST['manager']."'", "'".$_POST['image']."'");
             insertInto($employee, $columns, $values);
-            echo "<form action='additionalinfo.php' method='post'><button type='submit'>Return</button></form>";
+            header("location: Views.php");
         ?>
     </body>
 </html>

@@ -7,22 +7,8 @@
       {
         header("location: Views.php"); // redirecting to admin landing page
       } 
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Delete User
-        </title>
-    </head>
-    <body>
-        <?php
+      
             require("sql_helper.php");
             deleteRecord($employee, $_POST['deleteid']);
-        ?>
-        <h3>The user record has been deleted.</h3><br /><br />
-        <form action="search.php">
-            <button type="submit">Return</button>
-        </form>
-    </body>
-</html>
+            header("location: Views.php");
+?>

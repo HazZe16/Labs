@@ -570,9 +570,8 @@ if (isset($_POST['submit']))
  } 
  // Single Search
    elseif ($firstname!= ""){
-    $sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname, $role.name
-    		FROM $EmpR INNER JOIN $employee ON $EmpR.Eid = $employee.Eid 
-    				   INNER JOIN $role ON $EmpR.Rid = $role.Rid
+    $sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname
+    		FROM $employee
     		WHERE $employee.firstname LIKE '%$firstname%'";
     $result = mysqli_query($conn,$sql);
  } elseif ($lastname != "") {
@@ -633,10 +632,10 @@ if (isset($_POST['submit']))
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="Views.php">Directory</a></li>
-							<li><a href="#one">Departments</a></li>
-							<li><a href="HRview.php">Options</a></li>
-							<li><a href="login.php" class="button special">Sign Out</a></li>
+							<li><a href="Views.php">Home</a></li>
+							<li><a href="search.php">Search</a></li>
+							<li><a href="profile.php">Profile Page</a></li>
+							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -644,7 +643,7 @@ if (isset($_POST['submit']))
 			<!-- Banner -->
 				<section id="banner">
 					<div class="content">
-						<header><h1>Search Directory</h1>
+						<header><h1>Results</h1>
 						
 						</header>
 						<?php
@@ -661,7 +660,7 @@ if (isset($_POST['submit']))
                                 }
 						?>
 																		
-					<a href="search.php">Search Again</a>
+					<p></p><a href="search.php">Search Again</a></p>
 				</section>
 
 			<!-- Scripts -->

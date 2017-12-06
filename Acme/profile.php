@@ -22,9 +22,9 @@ require "sql_helper.php";
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="index.php">Directory</a></li>
-							<li><a href="#one">Departments</a></li>
-							<li><a href="Views">Tools</a></li>
+							<li><a href="Views.php">Home</a></li>
+							<li><a href="search.php">Search</a></li>
+							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>

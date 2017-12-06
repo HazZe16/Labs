@@ -74,12 +74,10 @@
 						********************************************************
 						********************************************************
 						*******************************************************.</p>
-						<form class="form-wrapper cf">
-  	<input type="text" placeholder="Search here..." required>
-
-						<ul class="actions">
-							<li><a href="#" class="button">Search Directory</a></li>
-						</ul>
+						<form action="detailedsearchresults.php" method="post" class="form-wrapper cf">
+  						<input id="firstname" type="text" name="firstname" Placeholder="First Name" required>
+						<input name="submit" type='submit' value='SEARCH'>
+						</form>
 					</div>
 					<a href="#three" class="goto-next scrolly">Next</a>
 				</section>

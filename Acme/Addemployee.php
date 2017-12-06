@@ -36,7 +36,7 @@ require 'sql_helper.php';
 				<section id="banner">
 					<div class="content">
 						<header><h1>Add Employee</h1>
-						<form action="confirmAddEmp.php" method="post">
+						<form action="confirmAddEmp.php" method="post" class="form-wrapper cf">
 						<p><label>Profile Picture <input type="file" accept="image/jpeg, image/jpg, image/png" name="image"></label></p>	
 						<p><label>First name <input type="text" name="firstname"></label></p>
 						<p><label>Last name <input type="text" name="lastname"></label></p>

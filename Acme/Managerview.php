@@ -52,9 +52,9 @@ if(!isset($_SESSION['login_user'])){
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
-							<a href="Addemployee.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+							<a href="Management.php">	<section class="4u 6u(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-area-chart"></span>
-									<h3>Add New Employee</h3>
+									<h3>Manage your Employees</h3>
 									<p>**************************.</p>
 								</a></section>
 							<a href="search.php">	<section class="4u 6u$(medium) 12u$(xsmall)">

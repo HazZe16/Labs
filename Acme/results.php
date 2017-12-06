@@ -17,9 +17,9 @@
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-							<li><a href="Views.php">Directory</a></li>
-							<li><a href="#one">Departments</a></li>
-							<li><a href="profile.php">Profile</a></li>
+							<li><a href="Views.php">Home</a></li>
+							<li><a href="search.php">Search</a></li>
+							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
@@ -74,7 +74,8 @@
 				<?php }
 				if ($_SESSION['user_admin'] == 1) 
     				{
-        			echo "<td><form action='deleteEmployee.php' method='post'><button type='submit' name='deleteid' value='$selected'>Delete</button></form>";
+        			echo "<td><form action='deleteEmployee.php' method='post' class='form-wrapper cf'><button type='submit' name='deleteid' value='$selected'>Delete</button></form>";
+        			echo "<td><form action='editEmployee.php' method='post' class='form-wrapper cf'><button type='submit' name='editid' value='$selected'>Edit</button></form>";
     				} 
     			if ($_SESSION['user_manager'] == 1) 
     				{

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <?php
 session_start();
+if(isset($_SESSION['login_user'])){
+        header("Location: Views.php?message=You%20are%20already%20logged%20in.");
+    }
 ?>
 <html >
 <head>
@@ -170,7 +173,7 @@ body{
 		<br>
 		<div class="login">
 				<?php echo $_GET[message];?>
-				<form action="Logon.php" method="post">
+				<form action="Logon.php" method="post" class="form-wrapper cf">
 				<input id ="username" type="text" placeholder="username" name="username"><br>
 				<input id ="password" type="password" placeholder="********" name="password"><br>
 				<input name="submit" type='submit' value="Logon"> </p>

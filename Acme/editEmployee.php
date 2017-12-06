@@ -1,8 +1,15 @@
 <!DOCTYPE HTML>
 <?php
 session_start(); // Starting Session
+ session_start();
+ $_SESSION['edit'] = $_POST['editid'];
 require 'sql_helper.php';
-
+        if(!isset($_SESSION['login_user'])){
+        header("Location: index.php?message=You%20need%20to%20login%20first.");
+    }
+    else if(isset($_SESSION['admin'])){
+        header("Location: profile.php");
+    }
 ?>
 <html>
 	<head>
@@ -19,7 +26,7 @@ require 'sql_helper.php';
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
 						<ul>
-								<li><a href="Views.php">Home</a></li>
+							<li><a href="Views.php">Home</a></li>
 							<li><a href="search.php">Search</a></li>
 							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
@@ -30,11 +37,11 @@ require 'sql_helper.php';
 			<!-- Banner -->
 				<section id="banner">
 					<div class="content">
-						<header><h1>Search Directory</h1>
-						<?php echo $_GET[message];?>
-							<form action="detailedsearchresults.php" method="post">
-							<input id="firstname" type="text" name="firstname" Placeholder="First Name"><br>
-							<input id="lastname" type="text" name="lastname" Placeholder="Last Name"><br>
+						<header><h1>Insert Additional Info</h1>
+						<?php echo $_GET[message];
+						
+						?>
+							<form action="Update.php" method="post">
 							
 							<?php echo "Department: <select name=department>";
 								    echo "<option name= None value=". NULL." >None</option>\n";
@@ -80,12 +87,12 @@ require 'sql_helper.php';
                                 }
                                 echo "</select>\n<br>";
                              ?>
-							<input name="submit" type='submit' value='SEARCH'>
+							<input name='submit' type='submit' value='SUBMIT'>
 							</form>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
-
+			<!-- Footer -->
 				<footer id="footer">
 					<ul class="icons">
 						<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
