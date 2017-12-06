@@ -12,8 +12,6 @@ if (isset($_POST['submit']))
   $rol= $_POST['role'];
   $man= $_POST['manager'];
   
-  echo $man;
-  
   
   
   //Full Search
@@ -55,7 +53,7 @@ if (isset($_POST['submit']))
     					   INNER JOIN $manager ON $manager.Mid = $EmpM.Mid
     		WHERE $loc.Lid = '$location' AND $dep.Did = '$department' AND $EmpM.Mid = '$man' AND $employee.lastname LIKE '$lastname%' AND $employee.firstname LIKE '$firstname%'";
     		 $result = mysqli_query($conn,$sql);
- }  elseif ($firstname != "" and $lastname != "" and $department != NULL and $man != NULL and $rol != NULL) {
+ } elseif ($firstname != "" and $lastname != "" and $department != NULL and $man != NULL and $rol != NULL) {
 	$sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname, $role.name
     		FROM $employee INNER JOIN $EmpR ON $EmpR.Eid = $employee.Eid 
     					   INNER JOIN $role ON $EmpR.Rid = $role.Rid
@@ -79,7 +77,7 @@ if (isset($_POST['submit']))
     					   INNER JOIN $manager ON $manager.Mid = $EmpM.Mid
     		WHERE $loc.Lid = '$location' AND $EmpM.Mid = '$man' AND $role.Rid = '$rol' AND $employee.lastname LIKE '$lastname%' AND $employee.firstname LIKE '$firstname%'";
     		 $result = mysqli_query($conn,$sql);
- }  elseif ($firstname != "" and $man != NULL and $department != NULL and $location != NULL and $rol != NULL) {
+ } elseif ($firstname != "" and $man != NULL and $department != NULL and $location != NULL and $rol != NULL) {
 	$sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname, $role.name
     		FROM $employee INNER JOIN $EmpR ON $EmpR.Eid = $employee.Eid 
     					   INNER JOIN $role ON $EmpR.Rid = $role.Rid
@@ -615,7 +613,7 @@ if (isset($_POST['submit']))
     $result = mysqli_query($conn,$sql);
  } else {
  echo "invalid search result, please try again";
- header("location: Views.php?message=Invalid%20search%20please%20give%20more%20details.");
+ header("location: search.php?message=Invalid%20search%20please%20give%20more%20details.");
 }
 }
 ?>

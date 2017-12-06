@@ -9,9 +9,11 @@
     $dep = "Department";
     $role = "Role";
     $loc = "Branch";
+    $manager = "Manager";
     $EmpD = "EmpDepartments";
     $EmpL = "EmpBranch";
     $EmpR = "EmployeeRoles";
+    $EmpM = "EunderM";
     
     $conn = mysqli_connect($servername, $username, $password);
     
@@ -47,26 +49,19 @@
         return query($sql);
     }
     
-    function createRecord($table, $values) 
-    {
-        return insertInto($table, ["name","year","capacity","available","kitchen","laundry","specialNeeds"], $values);
-    }
-    
-    function createReservationRecord($table, $values) 
-    {
-        return insertInto($table, ["reservationRecordID", "raID", "studentName", "class", "gender", "cwid", "kitchen", "laundry", "specialNeeds"], $values);
-    }
-    
-    function createUsersRecord($table, $values)
-    {
-        return insertInto($table, ['Id', 'username', 'password', 'firstname', 'lastname', 'class', 'gender', 'kitchen', 'laundry', 'specialneeds', 'email', 'UserID', 'admin'], $values);
-    }
-    
+   
     function insertInto($table, $columns, $values) 
     {
-        $sql = "INSERT INTO $table (" . implode(", ", $columns). ") VALUES (" . implode(", ", $values) . ")";
-        echo "Inserting a new record with SQL Statement: $sql\n<br>";
-        return query($sql);
+        runQuery("INSERT INTO $table (" . implode(", ", $columns). ") VALUES (" . implode(", ", $values) . ")");
+
     }
     
+    function deleteRecord($table, $identifier){
+        runQuery("DELETE FROM $table WHERE Eid='$identifier'");
+    }
+    function runQuery($sql){
+        global $conn;
+        return mysqli_query($conn, $sql);
+        echo "Creating table with SQL Statement: $sql\n<br>";
+    }
 ?>

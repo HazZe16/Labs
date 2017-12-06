@@ -1,9 +1,6 @@
 <!DOCTYPE HTML>
 <?php
     session_start();
-    if(!isset($_SESSION['login_user'])){
-        header("Location: login.php?message=You%20need%20to%20login%20first.");
-    }
 ?>
 <html>
 	<head>
@@ -54,25 +51,36 @@
     			WHERE $employee.Eid = '$selected'";
     			$result2 = mysqli_query($conn, $sql2);
             	$S2user = mysqli_fetch_assoc($result2);
-            	
+            	$id = $Suser['Eid'];
             	//for location data
             	
         		?>
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$Suser['Picture'].'.jpg'; ?>" align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$Suser['Picture']; ?>" align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $Suser['firstname'].' '. $Suser['lastname'];?></h2>
 				</header>
 				
 				
 				<p><label><?php echo $Suser['Email'];?></label></p>
+				<?php 
+				if(isset($_SESSION['login_user'])){ ?>
 				<p><label><?php echo $Suser['DateofBirth'];?></label></p>
 				<p><label><?php echo $S2user['Rname'];?></label></p>
 				<p><label><?php echo $S2user['Lname'];?></p>
 				<p><label><?php echo $S2user['Dname'];?></label></p>
 				<p><label><?php echo $Suser['Phone'];?></label></p>
-				
+				<?php }
+				if ($_SESSION['user_admin'] == 1) 
+    				{
+        			echo "<td><form action='deleteEmployee.php' method='post'><button type='submit' name='deleteid' value='$selected'>Delete</button></form>";
+    				} 
+    			if ($_SESSION['user_manager'] == 1) 
+    				{
+        			echo "<td><form action='ManageEmployee.php' method='post'><button type='submit' name='manageid' value='$selected'>Add under your management</button></form>";
+    				} 
+				?>
 				
 				
 			

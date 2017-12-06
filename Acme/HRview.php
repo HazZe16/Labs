@@ -23,7 +23,7 @@ if(!isset($_SESSION['login_user'])){
 					<nav id="nav">
 						<ul>
 							<li><a href="Views.php">Home</a></li>
-							<li><a href="#one">Departments</a></li>
+							<li><a href="search.php">Search</a></li>
 							<li><a href="profile.php">Profile Page</a></li>
 							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
@@ -35,7 +35,7 @@ if(!isset($_SESSION['login_user'])){
 					<div class="content">
 						<header><h1>Search Directory</h1>
 						<?php echo $_GET[message];?>
-							<form action="searchresults.php" method="post">
+							<form action="detailedsearchresults.php" method="post">
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name">
 							<input name="submit" type='submit' value='SEARCH'>
 							</form>
@@ -44,40 +44,11 @@ if(!isset($_SESSION['login_user'])){
 				</section>
 
 			<!-- One -->
-				<section id="one" class="spotlight style1 bottom">
-					<span class="image fit main"><img src="images/main website.jpg" alt="" /></span>
-					<div class="content">
-						<div class="container">
-							<div class="row">
-								<div class="4u 12u$(medium)">
-									<header>
-										<h2>Departments</h2>
-										<ul><a href="#" class="button1">Finance</a></ul>
-										<ul><a href="#" class="button2">Human Resources</a></ul>
-										<ul><a href="#" class="button3">Marketing</a></ul>
-										<ul><a href="#" class="button4">Faculty</a></ul>
-									</header>
-								</div>
-								<div class="4u 12u$(medium)">
-									
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					<a href="#two" class="goto-next scrolly">Next</a>
-				</section>
-
-			
-				
-			
-
-			<!-- Four -->
-				<section id="four" class="wrapper style1 special fade-up">
+				<section id="one" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>**************************</h2>
-							<p>**************************</p>
+							<h2>Human Resources</h2>
+							<p>Options</p>
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
@@ -85,32 +56,21 @@ if(!isset($_SESSION['login_user'])){
 									<span class="icon alt major fa-area-chart"></span>
 									<h3>Add New Employee</h3>
 									<p>**************************.</p>
-								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
+								</a></section>
+							<a href="search.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-comment"></span>
-									<h3>Remove Current Employee</h3>
+									<h3>Search & Edit Employee Info</h3>
 									<p>**************************.</p>
-								</section>
-								<section class="4u$ 6u(medium) 12u$(xsmall)">
+								</a></section>
+							<a href="profile.php">	<section class="4u$ 6u(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-flask"></span>
-									<h3>Edit Current Information</h3>
+									<h3>View Profile</h3>
 									<p>**************************.</p>
-								</section>
-								<section class="4u 6u$(medium) 12u$(xsmall)">
+								</a></section>
+							<a href="Raccess.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
 									<span class="icon alt major fa-paper-plane"></span>
 									<h3>Email authentication Requests</h3>
-									<p>**************************.</p>
-								</section>
-								<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-file"></span>
-									<h3>Department Access</h3>
-									<p>**************************.</p>
-								</section>
-								<section class="4u$ 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-lock"></span>
-									<h3>Security</h3>
-									<p>**************************.</p>
-								</section>
+								</a></section>
 							</div>
 						</div>
 						<footer class="major">

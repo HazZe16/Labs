@@ -35,7 +35,7 @@ require "sql_helper.php";
 				
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$_SESSION['Picture']?> align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$_SESSION['Picture']; ?> align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'] ?></h2>
 				</header>

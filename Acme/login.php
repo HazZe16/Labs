@@ -173,8 +173,8 @@ body{
 				<form action="Logon.php" method="post">
 				<input id ="username" type="text" placeholder="username" name="username"><br>
 				<input id ="password" type="password" placeholder="********" name="password"><br>
-				<input name="submit" type='submit' value="Logon">
-				<input type="button" value="Forgot Password?">
+				<input name="submit" type='submit' value="Logon"> </p>
+				<input type="button" value="Change Password" onclick="window.location.href='forgot.php'">
 				<input type="button" value="Return Home" onclick="window.location.href='index.php'">
 		</div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>

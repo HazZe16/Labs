@@ -4,10 +4,10 @@ session_start();
     if(!isset($_SESSION['login_user'])){
         header("Location: index.php?message=You%20need%20to%20login%20first.");
     }
-    else if(!isset($_SESSION['admin'])){
+    else if(isset($_SESSION['admin'])){
         header("Location: profile.php");
     }
-?>
+require 'sql_helper.php';
 ?>
 <html>
 	<head>
@@ -27,7 +27,7 @@ session_start();
 							<li><a href="search.php">Directory</a></li>
 							<li><a href="Views.php">Options</a></li>
 							<li><a href="profile.php">Edit Profile</a></li>
-							<li><a href="login.php" class="button special">Sign Out</a></li>
+							<li><a href="logout.php" class="button special">Sign Out</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -36,12 +36,27 @@ session_start();
 				<section id="banner">
 					<div class="content">
 						<header><h1>Add Employee</h1>
-							
-						<p><label>Name <input type="tel" name="Firstname"></label></p>
-						<p><label>Phone <input type="tel" name="phone_number"></label></p>
-						<p><label>Email <input type="tel" name="phone_number"></label></p>
-					<p><label>Department <input type="tel" name="phone_number"></label></p>
-					<a href="" class="button"> add employee
+						<form action="confirmAddEmp.php" method="post">
+						<p><label>Profile Picture <input type="file" accept="image/jpeg, image/jpg, image/png" name="image"></label></p>	
+						<p><label>First name <input type="text" name="firstname"></label></p>
+						<p><label>Last name <input type="text" name="lastname"></label></p>
+						<p><label>Date of Birth <input type="text" name="DateofBirth" placeholder='MM/DD/YYYY'></label></p>
+						<p><label>Phone <input type="text" name="phone" placeholder='###-###-####'></label></p>
+						<p><label>Email <input type="text" name="Email"></label></p>
+						<p><label>Username Placeholder <input type="text" name="Username"></label></p>
+						<p><label>Password Placeholder <input type="text" name="password"></label></p>
+						<p>Admin: <input type="radio" name="admin" id="a1" value=1>  <label for="a1"><span></span>Yes</label>
+        						<input type="radio" name="admin" id="a2" value=0> <label for="a2"><span></span>No</label></p>
+						<p>Manager: <input type="radio" name="manager" id="r1" value=1> <label for="r1"><span></span>Yes</label>
+        						<input type="radio" name="manager" id="r2" value=0><label for="r2"><span></span>No</label></p>
+        			<?php
+        						foreach ($_POST as $key => $value)
+        				{
+           				 echo '<input type="hidden" name="', $key,'" value="', $value,'"> ';
+       					 }
+       					?>
+					<button type='submit' method='post'>Add Employee</button>
+					</form>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>
 				

@@ -17,7 +17,7 @@ if (isset($_POST['submit']))
     $password=$_POST['password'];
 
     // SQL query to fetch information of registered users and finds user match.
-    $sql = "SELECT * FROM $employee WHERE password='$password' AND username='$username'";
+    $sql = "SELECT * FROM $employee WHERE password=PASSWORD('$password') AND username='$username'";
     echo "Running SQL $sql\n<br>";
     $result = mysqli_query($conn,$sql);
     echo mysqli_num_rows($result). " is the number of rows";

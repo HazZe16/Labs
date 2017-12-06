@@ -2,9 +2,6 @@
 <?php
 session_start(); // Starting Session
 require 'sql_helper.php';
-if(!isset($_SESSION['login_user'])){
-        header("Location: index.php?message=You%20need%20to%20login%20first.");
-    }
 ?>
 <html>
 	<head>
