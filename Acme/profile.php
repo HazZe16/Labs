@@ -35,7 +35,7 @@ require "sql_helper.php";
 				
 					<div class="content" >
 					<a>
-						<img src="<?php echo 'ProfilePics/'.$_SESSION['Picture']; ?> align="left" style="width:500px" style="width:500px"/></a>
+						<img src="<?php echo 'ProfilePics/'.$_SESSION['user_picture']; ?>" align="left" style="width:500px" style="width:500px"/></a>
 						<header>
 				<h2><?php echo $_SESSION['user_firstname'].' '.$_SESSION['user_lastname'] ?></h2>
 				</header>
@@ -43,14 +43,12 @@ require "sql_helper.php";
 				
 				<p><label><?php echo $_SESSION['user_email']?></label></p>
 				<p><label><?php echo $_SESSION['user_DoB']?></label></p>
-				<p><label>Location</label></p>
-				<p><label>Deparetment</label></p>
 				<p><label><?php echo $_SESSION['user_phone']?></label></p>
 				
 				
 				
 			
-				<div  align="center"> <a href="" class="button">Go Home </a> <a href="" class="button">New Search </a> </p>
+				<div  align="center"> <a href="Views.php" class="button">Go Home </a>
 						
 						
 						

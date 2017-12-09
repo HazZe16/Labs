@@ -2,7 +2,8 @@
 session_start(); // Starting Session
 require 'sql_helper.php';
 
-if (isset($_POST['submit']))
+
+if (isset($_POST['submit'])) // 
 {
     
   if (empty($_POST['username']) || empty($_POST['password'])) 
@@ -33,7 +34,7 @@ if (isset($_POST['submit']))
       $_SESSION['user_DoB'] = $aUser['DateofBirth'];
       $_SESSION['user_department'] = $aUser['Department'];
       $_SESSION['user_email'] = $aUser['Email'];
-      $_SESSION['user_phone'] = $aUser['phone'];
+      $_SESSION['user_phone'] = $aUser['Phone'];
       $_SESSION['user_picture'] = $aUser['Picture'];
       $_SESSION['user_admin'] = $aUser['admin'];
       $_SESSION['user_manager'] = $aUser['manager'];

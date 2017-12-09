@@ -2,6 +2,8 @@
 session_start(); // Starting Session
 require 'sql_helper.php';
 
+
+// Used for the employees to take them to their specified options page
 if(!isset($_SESSION['login_user'])){
         header("Location: login.php?message=You%20need%20to%20login%20first.");
     }

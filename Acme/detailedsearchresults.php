@@ -1,4 +1,5 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML><html>
+	
 <?php
 session_start();
 require 'sql_helper.php';
@@ -13,7 +14,7 @@ if (isset($_POST['submit']))
   $man= $_POST['manager'];
   
   
-  
+// Search method for multi search
   //Full Search
   if ($firstname != "" and $lastname != "" and $department != NULL and $location != NULL and $rol != NULL and $man != NULL) {
 	$sql = "SELECT $employee.Eid, $employee.Picture, $employee.firstname, $employee.lastname, $role.name
@@ -646,6 +647,7 @@ if (isset($_POST['submit']))
 						<header><h1>Results</h1>
 						
 						</header>
+						<!-- Display all search results, which is their picture (if they have one), their name, and their role in Acme-->
 						<?php
                                 $i=1;
                                 while($row=mysqli_fetch_array($result)) 
@@ -654,8 +656,11 @@ if (isset($_POST['submit']))
 						<li><img src="<?php echo 'ProfilePics/'.$row['Picture']; ?>" style="width:200px">
 						<p><?php echo $row['firstname']. " ". $row['lastname']. " ". $row['name'];?></p></li>
 						<?php
+						
+						//Button used to go to detailed results page
 						$id = $row['Eid'];
-                	    echo "<td><form action='results.php' method='post'><button type='submit' name='expandid' value='$id'>Expand</button></form>";
+                	    echo "<td><form action='results.php' method='post'> 
+                	    <button class='button' type='submit' name='expandid' value='$id'>Expand</button></form>";
 								$i++;								
                                 }
 						?>

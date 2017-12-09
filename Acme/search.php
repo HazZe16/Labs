@@ -27,15 +27,18 @@ require 'sql_helper.php';
 					</nav>
 				</header>
 
-			<!-- Banner -->
+			<!-- Banner /Search Criteria for the employee you are searching for-->
 				<section id="banner">
 					<div class="content">
 						<header><h1>Search Directory</h1>
 						<?php echo $_GET[message];?>
 							<form action="detailedsearchresults.php" method="post">
+								
+							<!--First name & Last name -->
 							<input id="firstname" type="text" name="firstname" Placeholder="First Name"><br>
 							<input id="lastname" type="text" name="lastname" Placeholder="Last Name"><br>
 							
+							<!--Department-->
 							<?php echo "Department: <select name=department>";
 								    echo "<option name= None value=". NULL." >None</option>\n";
 								  $sqlD = "SELECT * FROM Department";
@@ -47,6 +50,7 @@ require 'sql_helper.php';
                                 echo "</select>\n<br>";
                              ?>
                              
+                             <!--Branch Location-->
                              <?php echo "Location: <select name=location>";
                             		echo "<option name= None value=". NULL." >None</option>\n";
 								  $sqlB = "SELECT * FROM Branch";
@@ -58,6 +62,7 @@ require 'sql_helper.php';
                                 echo "</select>\n<br>";
                              ?>
                              
+                             <!--Role in the company-->
                              <?php echo "Role: <select name=role>";
                             		echo "<option name= None value=". NULL.">None</option>\n";
 								  $sqlR = "SELECT * FROM Role";
@@ -69,6 +74,7 @@ require 'sql_helper.php';
                                 echo "</select>\n<br>";
                              ?>
                              
+                             <!--Manager they are under-->
                              <?php echo "Manager: <select name=manager>";
                             		echo "<option name= None value=".NULL." >None</option>\n";
 								  $sqlM = "SELECT *

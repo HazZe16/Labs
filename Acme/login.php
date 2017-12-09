@@ -35,8 +35,8 @@ body{
 	bottom: -40px;
 	width: intial;
 	height: initial;
-	background-image: url(img/login.jpg);
-	background-size: initial;	
+	background-image: url("https://media.giphy.com/media/rIz6sFp5v2GhW/giphy.gif");
+	background-size: cover;	
 	z-index: 0;
 }
 
@@ -176,7 +176,7 @@ body{
 				<form action="Logon.php" method="post" class="form-wrapper cf">
 				<input id ="username" type="text" placeholder="username" name="username"><br>
 				<input id ="password" type="password" placeholder="********" name="password"><br>
-				<input name="submit" type='submit' value="Logon"> </p>
+				<input name="submit" type="submit" value="Logon"> </p>
 				<input type="button" value="Change Password" onclick="window.location.href='forgot.php'">
 				<input type="button" value="Return Home" onclick="window.location.href='index.php'">
 		</div>

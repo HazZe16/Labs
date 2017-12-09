@@ -43,29 +43,27 @@ if(!isset($_SESSION['login_user'])){
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- One -->
+			<!-- One /Basic Employee Options/-->
 				<section id="one" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>Human Resources</h2>
+							<h2>Employee</h2>
 							<p>Options</p>
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
-							<a href="ApplicationAccess.php">	<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-area-chart"></span>
+							<a href="Applicationaccess.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="https://services.ushmm.org/services/Index_Files/help-desk-icon-png-5.png" height="150" width="150"></span><br></br>
 									<h3>Request Access</h3>
-									<p>**************************.</p>
+								
 								</a></section>
-							<a href="search.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-comment"></span>
-									<h3>Search for Employee</h3>
-									<p>**************************.</p>
+							<a href="search.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="https://cdn0.iconfinder.com/data/icons/user-icon-profile-businessman-finance-vector-illus/100/06-1User-512.png" height="150" width="150"></span><br></br>
+									<h3>Search & Edit Employee</h3>
 								</a></section>
-							<a href="profile.php">	<section class="4u$ 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-flask"></span>
+								<a href="profile.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="https://cdn4.iconfinder.com/data/icons/clipboard-9/100/Resume-512.png" height="150" width="150"></span><br></br>
 									<h3>View Profile</h3>
-									<p>**************************.</p>
 								</a></section>
 							</div>
 						</div>

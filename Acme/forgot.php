@@ -32,8 +32,8 @@ body{
 	bottom: -40px;
 	width: intial;
 	height: initial;
-	background-image: url(img/login.jpg);
-	background-size: initial;	
+	background-image: url(https://media.giphy.com/media/rIz6sFp5v2GhW/giphy.gif);
+	background-size: cover;	
 	z-index: 0;
 }
 

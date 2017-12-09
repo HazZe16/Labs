@@ -1,6 +1,8 @@
 <!DOCTYPE HTML>
 <?php
 session_start();
+
+// check if person is logged and a HR/admin before viewing the page //
     if(!isset($_SESSION['login_user'])){
         header("Location: index.php?message=You%20need%20to%20login%20first.");
     }
@@ -55,7 +57,7 @@ require 'sql_helper.php';
            				 echo '<input type="hidden" name="', $key,'" value="', $value,'"> ';
        					 }
        					?>
-					<button type='submit' method='post'>Add Employee</button>
+					<button class='button type='submit' method='post'>Add Employee</button>
 					</form>
 					</div>
 					<a href="#one" class="goto-next scrolly">Next</a>

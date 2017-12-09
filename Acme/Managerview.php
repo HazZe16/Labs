@@ -17,7 +17,7 @@ if(!isset($_SESSION['login_user'])){
 	<body class="landing">
 		<div id="page-wrapper">
 
-			<!-- Header -->
+			<!-- Header /Options available on every page for every employee/ -->
 				<header id="header">
 					<h1 id="logo"><a href="index.php">ACME</a></h1>
 					<nav id="nav">
@@ -30,7 +30,7 @@ if(!isset($_SESSION['login_user'])){
 					</nav>
 				</header>
 
-			<!-- Banner -->
+			<!-- Banner /with a basic search for an employee/ -->
 				<section id="banner">
 					<div class="content">
 						<header><h1>Search Directory</h1>
@@ -43,33 +43,31 @@ if(!isset($_SESSION['login_user'])){
 					<a href="#one" class="goto-next scrolly">Next</a>
 				</section>
 
-			<!-- One -->
+			<!-- One /Manager employee options/ -->
 				<section id="one" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>Human Resources</h2>
+							<h2>Manager</h2>
 							<p>Options</p>
 						</header>
 						<div class="box alt">
 							<div class="row uniform">
 							<a href="Management.php">	<section class="4u 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-area-chart"></span>
+								<img src="http://www.freeiconspng.com/uploads/--meeting-recruitment-talk-teamwork-icon--icon-search-engine-23.png" height="150" width="150"> </span><br></br>
 									<h3>Manage your Employees</h3>
-									<p>**************************.</p>
+									
 								</a></section>
-							<a href="search.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-comment"></span>
-									<h3>Search & Edit Employee Info</h3>
-									<p>**************************.</p>
+								<a href="search.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="https://cdn0.iconfinder.com/data/icons/user-icon-profile-businessman-finance-vector-illus/100/06-1User-512.png" height="150" width="150"></span><br></br>
+									<h3>Search & Edit Employee</h3>
 								</a></section>
-							<a href="profile.php">	<section class="4u$ 6u(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-flask"></span>
+								<a href="profile.php">	<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="https://cdn4.iconfinder.com/data/icons/clipboard-9/100/Resume-512.png" height="150" width="150"></span><br></br>
 									<h3>View Profile</h3>
-									<p>**************************.</p>
 								</a></section>
-							<a href="Raccess.php">	<section class="4u 6u$(medium) 12u$(xsmall)">
-									<span class="icon alt major fa-paper-plane"></span>
-									<h3>Email authentication Requests</h3>
+							<a href="Raccess.php">		<section class="4u 6u(medium) 12u$(xsmall)">
+									<img src="http://www.pvhc.net/img158/axwtdtwagbivbzhajsnl.png" height="150" width="150"> </span><br></br>
+									<h3>Email Authentication Requests</h3>
 								</a></section>
 							</div>
 						</div>

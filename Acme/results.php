@@ -30,6 +30,7 @@
 				<?php
             	require("sql_helper.php");
             	
+            	//
             	$selected = $_POST['expandid'];
             	
             	//for the employee data
@@ -74,8 +75,8 @@
 				<?php }
 				if ($_SESSION['user_admin'] == 1) 
     				{
-        			echo "<td><form action='deleteEmployee.php' method='post' class='form-wrapper cf'><button type='submit' name='deleteid' value='$selected'>Delete</button></form>";
-        			echo "<td><form action='editEmployee.php' method='post' class='form-wrapper cf'><button type='submit' name='editid' value='$selected'>Edit</button></form>";
+        			echo "<td><form action='deleteEmployee.php' method='post' class='form-wrapper cf'><button class='button' type='submit' name='deleteid' value='$selected'>Delete</button></form>";
+        			echo "<td><form action='editEmployee.php' method='post' class='form-wrapper cf'><button class='button type='submit' name='editid' value='$selected'>Edit</button></form>";
     				} 
     			if ($_SESSION['user_manager'] == 1) 
     				{

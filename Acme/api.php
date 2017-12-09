@@ -1,5 +1,7 @@
 <?php
  
+ require "sql_helper.php";
+ 
 // get the HTTP method, path and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
@@ -30,7 +32,7 @@ for ($i=0;$i<count($columns);$i++) {
 // create SQL based on HTTP method
 switch ($method) {
   case 'GET':
-    $sql = "select * from `$table`".($key?" WHERE id=$key":''); break;
+    $sql = "select * from `$employee`".($key?" WHERE Eid=$key":''); break;
   case 'PUT':
     $sql = "update `$table` set $set where id=$key"; break;
   case 'POST':
